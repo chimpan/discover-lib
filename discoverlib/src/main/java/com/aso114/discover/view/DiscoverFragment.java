@@ -258,6 +258,7 @@ public abstract class DiscoverFragment extends Fragment implements BaseQuickAdap
     public void onDestroyView() {
         super.onDestroyView();
         OkGo.getInstance().cancelTag(linkUrl);
+        linkUrl="";
         if (pd != null)
             pd.dismissDialog();
         if (web != null)

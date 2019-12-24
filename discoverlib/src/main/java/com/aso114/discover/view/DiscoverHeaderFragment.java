@@ -238,11 +238,13 @@ public abstract class DiscoverHeaderFragment extends Fragment implements BaseQui
     public void onDestroyView() {
         super.onDestroyView();
         OkGo.getInstance().cancelTag(linkUrl);
+        linkUrl = "";
         if (pd != null)
             pd.dismissDialog();
         if (web != null)
             web.destroy();
     }
+
     /**
      * 取消下载
      */
